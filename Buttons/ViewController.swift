@@ -86,10 +86,6 @@ final class ViewController: UIViewController {
         animateButton(scale: 1, sender: sender)
     }
 
-    @objc func buttonPressed(_ sender: UIButton) {
-        animateButton(scale: 1, sender: sender)
-    }
-
     private func animateButton(scale: CGFloat, sender: UIButton) {
         UIView.animate(withDuration: 0.2, delay: 0, options: [.beginFromCurrentState, .allowUserInteraction]) {
             sender.transform = CGAffineTransform(scaleX: scale, y: scale)
